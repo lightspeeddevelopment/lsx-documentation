@@ -1,5 +1,5 @@
 {
-  "name": "lsx-starter-plugin",
+  "name": "lsx-documentation",
   "version": "1.1.0",
   "description": "LSX Starter Plugin for building LSX theme extensions",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lightspeeddevelopment/lsx-starter-plugin"
+    "url": "git+https://github.com/lightspeeddevelopment/lsx-documentation"
   },
   "keywords": [
     "lsx"
@@ -16,9 +16,9 @@
   "author": "LightSpeed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lightspeeddevelopment/lsx-starter-plugin/issues"
+    "url": "https://github.com/lightspeeddevelopment/lsx-documentation/issues"
   },
-  "homepage": "https://github.com/lightspeeddevelopment/lsx-starter-plugin#readme",
+  "homepage": "https://github.com/lightspeeddevelopment/lsx-documentation#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rtlcss": "^1.0.0",
