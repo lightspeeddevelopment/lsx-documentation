@@ -1,0 +1,1 @@
+CMB.addCallbackForInit(function(){jQuery("input:text.cmb_colorpicker").wpColorPicker()}),CMB.addCallbackForClonedField("CMB_Color_Picker",function(o){o.find(".wp-color-result").remove(),o.find("input:text.cmb_colorpicker").wpColorPicker()});
