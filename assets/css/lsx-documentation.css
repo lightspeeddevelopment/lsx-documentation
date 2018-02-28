@@ -173,6 +173,19 @@
 
 .single.single-documentation .nav-tabs > li.active > a:after, .archive.post-type-archive-documentation .nav-tabs > li.active > a:after, .archive.tax-documentation-group .nav-tabs > li.active > a:after { border-color: transparent transparent #F6F6F6 transparent; }
 
-figure.lsx-documentation-avatar { padding-top: 45px; padding-bottom: 25px; }
+figure.lsx-documentation-avatar { padding-top: 45px; padding-bottom: 18px; }
+
+.archive-doc-cat { color: #959595; line-height: 30px; } 
+
+.lsx-documentation-slot { border: 2px solid #DDDDDD; border-radius: 3px; background-color: #FFFFFF; }
+
+a.single-doc-tax-list:hover::after { content: "  >"; padding-left: 2px; }
+
+.single-doc-tax-list { line-height: 32px; color: #4A4A4A; }
+
+.single-doc-tax-heading { margin-top: 14px !important; margin-bottom: 10px !important; }
+
+.lsx-documentation-row .col-sm-6:nth-child(1) { width: 100% !important; }
+
 
 /*# sourceMappingURL=maps/lsx-documentation.css.map */
