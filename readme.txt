@@ -5,13 +5,19 @@ Donate link: https://www.lsdev.biz/product/lsx-documentation/
 Requires at least: 4.3
 Tested up to: 4.9.4
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.1.2
 License: GPLv3
 
 It adds a “documentation” post type, allowing you to categorize and display your documentation on your LSX website. This is useful when selling software that requires installation directions, and a general breakdown of the software.
 
 == Description ==
 LightSpeed’s LSX documentation Extension plugin is here to help you add advanced “documentation” section options to your Wordpress site running LSX Theme.
+
+The LSX documentation Extension adds the “documentation” post type which allows you to categorize and display your finest work. The extension is interconnected with the Reviews Extension, The Services Extension and the Team Extension. This means that on the documentation post you can display who on your team worked on the project, what services were provided in the project, as well as any connected reviews for the particular project.
+
+The plugin features customized project options. This feature makes adding information and images to your documentation super simple, also you can add links to external websites to show extra info. It also allows to create a contact form modal on each project page.
+
+The customization area allows you to set a client title and logo, and set a custom url for that client. The extension interconnects with othe LSX Theme extention like Services, Testimonials and Teams. You can create project groups for better categorization and make fetured documentation. 
 
 We offer premium support for this plugin. Premium support that can be purchased via [lsdev.biz](https://www.lsdev.biz/).
 
@@ -61,8 +67,8 @@ Yes. Just send us a message via [contact form](https://www.lsdev.biz/contact/) w
 
 == Screenshots ==
 1. All documentation
-2. Single doc page
-3. Documentation settings
+2. Single Project
+3. Project settings
 
 == Changelog ==
 Change Log

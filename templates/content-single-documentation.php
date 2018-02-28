@@ -21,16 +21,9 @@
 		}
 	}
 
-	if ( ! empty( $client_logo ) ) {
-		$client_logo = wp_get_attachment_image_src( $client_logo, 'full' );
-
-		if ( is_array( $client_logo ) ) {
-			$client_logo = '<img src="' . $client_logo[0] . '">';
-		}
-	}
-
+	
 	$doc_categories = '';
-	$terms = get_the_terms( get_the_ID(), 'documentation-group' );
+	$terms = get_the_terms( get_the_ID(), 'documentation-category' );
 
 	if ( $terms && ! is_wp_error( $terms ) ) {
 		$doc_categories = array();
@@ -69,7 +62,7 @@
 				'update_post_meta_cache' => false,
 				'tax_query' => array(
 					array(
-						'taxonomy' => 'documentation-group',
+						'taxonomy' => 'documentation-category',
 						'terms'    => $doc_categories_,
 					),
 				),
@@ -97,7 +90,7 @@
 
 	if ( class_exists( 'WooCommerce' ) ) {
 		$connection_product['post_type'] = 'product';
-		$connection_product['title'] = esc_html__( 'Related Products', 'lsx-documentation' ) . ' <small>' . esc_html__( 'Products relating to this documentation', 'lsx-documentation' ) . '</small>';
+		$connection_product['title'] = esc_html__( 'View the Product', 'lsx-documentation' ) . ' <small>' . esc_html__( 'Finished with the documentation? Let us head over to the product', 'lsx-documentation' ) . '</small>';
 		$connection_product['posts'] = get_post_meta( get_the_ID(), 'product_to_documentation', false );
 
 		if ( ! empty( $connection_product['posts'] ) ) {
@@ -229,35 +222,34 @@
 	<?php lsx_entry_top(); ?>
 
 	<div class="row">
-		<div class="col-xs-12 col-sm-7 col-md-8">
-			<div class="entry-content"><?php the_content(); ?></div>
-
-			<?php if ( count( $connections ) > 0 ) : ?>
-				<?php foreach ( $connections as $i => $connection ) : ?>
-					<?php
-						if ( 'testimonial' === $connection['post_type'] ) {
-							echo '<div class="tab-pane-fake">';
-							echo do_shortcode( $connection['shortcode'] );
-							echo '</div>';
-						}
-					?>
-				<?php endforeach; ?>
-			<?php endif; ?>
-		</div>
-
-		<div class="col-xs-12 col-sm-5 col-md-4">
+			<div class="col-xs-12 col-sm-5 col-md-4">
 			<div class="entry-fixed-sidebar-wrapper">
 				<div class="entry-fixed-sidebar">
-					<?php if ( ! empty( $client_logo ) ) : ?>
-						<div class="entry-meta-single"><?php echo wp_kses_post( $client_logo ); ?></div>
-					<?php elseif ( ! empty( $client ) ) : ?>
-						<div class="entry-meta-single"><?php echo esc_html( $client ); ?></div>
-					<?php endif; ?>
+<?php 
+$custom_terms = get_terms('documentation-category');
 
-					<?php if ( ! empty( $doc_categories ) ) : ?>
-						<div class="entry-meta-key"><?php esc_html_e( 'Industry:', 'lsx-documentation' ); ?></div>
-						<div class="entry-meta-value"><?php echo wp_kses_post( $doc_categories ); ?></div>
-					<?php endif; ?>
+foreach($custom_terms as $custom_term) {
+    wp_reset_query();
+    $args = array('post_type' => 'documentation',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'documentation-category',
+                'field' => 'slug',
+                'terms' => $custom_term->slug,
+            ),
+        ),
+     );
+
+     $loop = new WP_Query($args);
+     if($loop->have_posts()) {
+        echo '<h2 class="single-doc-tax-heading">'.$custom_term->name.'</h2>';
+
+        while($loop->have_posts()) : $loop->the_post();
+            echo '<a class="single-doc-tax-list" href="'.get_permalink().'">'.get_the_title().'</a><br>';
+        endwhile;
+		    wp_reset_postdata(); 
+     }
+} ?>
 
 					<?php if ( ! empty( $connection_service['small_list_html'] ) ) : ?>
 						<div class="entry-meta-key"><?php esc_html_e( 'Services:', 'lsx-documentation' ); ?></div>
@@ -277,7 +269,7 @@
 					<?php endif; ?>
 
 					<?php if ( ! empty( $url ) ) : ?>
-						<div class="entry-meta-single"><a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="nofollow" class="btn btn-block secondary-btn"><?php esc_html_e( 'See website', 'lsx-documentation' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+						<div class="entry-meta-single"><a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="nofollow" class="btn btn-block secondary-btn"><?php esc_html_e( 'View Product', 'lsx-documentation' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
 					<?php endif; ?>
 
 					<?php if ( ! empty( $button_label ) ) : ?>
@@ -286,8 +278,23 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
+		<div class="col-xs-12 col-sm-7 col-md-8">
+						<div class="entry-content"><?php the_content(); ?></div>
+
+			<?php if ( count( $connections ) > 0 ) : ?>
+				<?php foreach ( $connections as $i => $connection ) : ?>
+					<?php
+						if ( 'testimonial' === $connection['post_type'] ) {
+							echo '<div class="tab-pane-fake">';
+							echo do_shortcode( $connection['shortcode'] );
+							echo '</div>';
+						}
+					?>
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</div>
+	</div>
 	<?php if ( count( $connections ) > 0 ) : ?>
 		<?php foreach ( $connections as $i => $connection ) : ?>
 			<?php

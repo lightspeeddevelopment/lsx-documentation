@@ -1,28 +1,47 @@
 const gulp         = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const concat       = require('gulp-concat');
-const gettext      = require('gulp-gettext');
-const jshint       = require('gulp-jshint');
-const minify       = require('gulp-minify-css');
-const plumber      = require('gulp-plumber');
-const rename       = require('gulp-rename');
 const rtlcss       = require('gulp-rtlcss');
 const sass         = require('gulp-sass');
-const sort         = require('gulp-sort');
 const sourcemaps   = require('gulp-sourcemaps');
+const jshint       = require('gulp-jshint');
+const concat       = require('gulp-concat');
 const uglify       = require('gulp-uglify');
-const gutil        = require('gulp-util');
+const sort         = require('gulp-sort');
 const wppot        = require('gulp-wp-pot');
-
+const gettext      = require('gulp-gettext');
+const plumber      = require('gulp-plumber');
+const autoprefixer = require('gulp-autoprefixer');
+const gutil        = require('gulp-util');
+const rename       = require('gulp-rename');
+const minify       = require('gulp-minify-css');
+const map          = require('map-stream');
 const browserlist  = ['last 2 version', '> 1%'];
+
+const errorreporter = map(function(file, cb) {
+	if (file.jshint.success) {
+		return cb(null, file);
+	}
+
+	console.log('JSHINT fail in', file.path);
+
+	file.jshint.results.forEach(function (result) {
+		if (!result.error) {
+			return;
+		}
+
+		const err = result.error
+		console.log(`  line ${err.line}, col ${err.character}, code ${err.code}, ${err.reason}`);
+	});
+
+	cb(null, file);
+});
 
 gulp.task('default', function() {
 	console.log('Use the following commands');
 	console.log('--------------------------');
-	console.log('gulp compile-css               to compile the scss to css');
-	console.log('gulp compile-js                to compile the js to min.js');
-	console.log('gulp watch                     to continue watching the files for changes');
-	console.log('gulp wordpress-lang            to compile the lsx-starter-plugin.pot, lsx-starter-plugin-en_EN.po and lsx-starter-plugin-en_EN.mo');
+	console.log('gulp compile-css    to compile the scss to css');
+	console.log('gulp compile-js     to compile the js to min.js');
+	console.log('gulp watch          to continue watching the files for changes');
+	console.log('gulp wordpress-lang to compile the lsx-projects.pot, en_EN.po and en_EN.mo');
 });
 
 gulp.task('styles', function () {
@@ -72,7 +91,7 @@ gulp.task('styles-rtl', function () {
 gulp.task('compile-css', ['styles', 'styles-rtl']);
 
 gulp.task('js', function() {
-	return gulp.src('assets/js/src/**/*.js')
+	return gulp.src('assets/js/src/lsx-projects.js')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -80,14 +99,43 @@ gulp.task('js', function() {
 			}
 		}))
 		.pipe(jshint())
+		//.pipe(errorreporter)
+		.pipe(concat('lsx-projects.min.js'))
 		.pipe(uglify())
-		.pipe(rename({
-			suffix: '.min'
-		}))
 		.pipe(gulp.dest('assets/js'))
 });
 
-gulp.task('compile-js', (['js']));
+gulp.task('admin-js', function() {
+	return gulp.src('assets/js/src/lsx-projects-admin.js')
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
+		.pipe(jshint())
+		//.pipe(errorreporter)
+		.pipe(concat('lsx-projects-admin.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('assets/js'))
+});
+
+gulp.task('scporder-js', function() {
+	return gulp.src('assets/js/src/scporder.js')
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
+		.pipe(jshint())
+		//.pipe(errorreporter)
+		.pipe(concat('scporder.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('assets/js'))
+});
+
+gulp.task('compile-js', ['js', 'admin-js', 'scporder-js']);
 
 gulp.task('watch-css', function () {
 	return gulp.watch('assets/css/**/*.scss', ['compile-css']);
@@ -103,28 +151,26 @@ gulp.task('wordpress-pot', function() {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
-			domain: 'lsx-starter-plugin',
-			package: 'lsx-starter-plugin',
-			bugReport: 'https://github.com/lightspeeddevelopment/lsx-starter-plugin/issues',
+			domain: 'lsx-projects',
+			package: 'lsx-projects',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/lsx-starter-plugin.pot'))
+		.pipe(gulp.dest('languages/lsx-projects.pot'))
 });
 
 gulp.task('wordpress-po', function() {
 	return gulp.src('**/*.php')
 		.pipe(sort())
 		.pipe(wppot({
-			domain: 'lsx-starter-plugin',
-			package: 'lsx-starter-plugin',
-			bugReport: 'https://github.com/lightspeeddevelopment/lsx-starter-plugin/issues',
+			domain: 'lsx-projects',
+			package: 'lsx-projects',
 			team: 'LightSpeed <webmaster@lsdev.biz>'
 		}))
-		.pipe(gulp.dest('languages/lsx-starter-plugin-en_EN.po'))
+		.pipe(gulp.dest('languages/en_EN.po'))
 });
 
 gulp.task('wordpress-po-mo', ['wordpress-po'], function() {
-	return gulp.src('languages/lsx-starter-plugin-en_EN.po')
+	return gulp.src('languages/en_EN.po')
 		.pipe(gettext())
 		.pipe(gulp.dest('languages'))
 });

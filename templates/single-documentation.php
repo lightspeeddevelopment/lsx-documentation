@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a single project.
+ * The template for displaying a single documentation
  *
  * @package lsx-documentation
  */

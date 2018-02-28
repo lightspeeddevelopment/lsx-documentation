@@ -1,0 +1,457 @@
+# Copyright (C) 2017 lsx-projects
+# This file is distributed under the same license as the lsx-projects package.
+msgid ""
+msgstr ""
+"Project-Id-Version: lsx-projects\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: LightSpeed <webmaster@lsdev.biz>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: classes/class-lsx-projects-admin.php:46
+msgctxt "post type general name"
+msgid "Projects"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:47
+msgctxt "post type singular name"
+msgid "Project"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:48
+msgctxt "post type general name"
+msgid "Add New"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:49
+msgid "Add New Project"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:50
+msgid "Edit Project"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:51
+msgid "New Project"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:52
+msgid "All Projects"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:53
+msgid "View Project"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:54
+msgid "Search Projects"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:55
+msgid "No projects found"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:56
+msgid "No projects found in Trash"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:58
+msgctxt "admin menu"
+msgid "Projects"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:92
+msgctxt "taxonomy general name"
+msgid "Project Groups"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:93
+msgctxt "taxonomy singular name"
+msgid "Group"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:94
+msgid "Search Groups"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:95
+msgid "All Groups"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:96
+msgid "Parent Group"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:97
+msgid "Parent Group:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:98
+msgid "Edit Group"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:99
+msgid "Update Group"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:100
+msgid "Add New Group"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:101
+msgid "New Group Name"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:102
+msgid "Groups"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:127
+msgid "Featured:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:132
+msgid "Client:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:137
+msgid "Client logo:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:140
+msgid "Recommended image size: 320 x 50~60"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:143
+msgid "URL for the finished project:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:168
+msgid "Services related to this project:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:187
+msgid "Testimonials related to this project:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:206
+msgid "Team members involved with this project:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:225
+msgid "Products used for this project:"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:243
+msgid "Project Details"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:337, classes/class-lsx-projects-admin.php:338
+msgid "Theme Options"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:342
+msgid "Save Changes"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:363
+msgid "Display"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:375
+msgid "API"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:408
+msgid "Disable Single Posts"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:412
+msgid "Disable Single Posts."
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:425
+msgid "Placeholder"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:433
+msgid "Choose Image"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:434
+msgid "Delete"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:447
+msgid "Contact modal"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:452
+msgid "Enable contact modal"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:456
+msgid "Displays contact modal on project single."
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:461
+msgid "Button label"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:469
+msgid "Caldera Form ID"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:483
+msgid "Select featured image"
+msgstr ""
+
+#: classes/class-lsx-projects-admin.php:493
+msgid "Enter project title"
+msgstr ""
+
+#: classes/class-lsx-projects-frontend.php:153
+msgid "Portfolio"
+msgstr ""
+
+#: classes/class-lsx-projects-frontend.php:158
+msgid "Project Type"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:18
+msgid "LSX Projects"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:181
+msgid "Title:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:185
+msgid "Page Link:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:187
+msgid "Link the widget to a page"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:190
+msgid "Tagline:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:192
+msgid "Tagline to display below the widget title"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:195
+msgid "Columns:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:207
+msgid "Order By:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:211
+msgid "None"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:212
+msgid "ID"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:213
+msgid "Name"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:214
+msgid "Date"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:215
+msgid "Modified Date"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:216
+msgid "Random"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:217
+msgid "Menu (WP dashboard order)"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:227
+msgid "Order:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:231
+msgid "Ascending"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:232
+msgid "Descending"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:242
+msgid "Maximum amount:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:244
+msgid "Leave empty to display all"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:247
+msgid "Specify Projects by ID:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:249
+msgid "Comma separated list, overrides limit and order settings"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:252
+msgid "Display:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:256
+msgid "Excerpt"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:257
+msgid "Full Content"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:267
+msgid "Image size:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:271
+msgid "Button \"view all\" text:"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:273
+msgid "Leave empty to not display the button"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:277
+msgid "Display Images"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:281
+msgid "Responsive Images"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:285
+msgid "Carousel"
+msgstr ""
+
+#: classes/class-lsx-projects-widget.php:289
+msgid "Featured posts"
+msgstr ""
+
+#: classes/class-lsx-projects.php:177, classes/class-lsx-projects.php:188, templates/content-archive-projects.php:51
+msgid "View more"
+msgstr ""
+
+#: classes/class-lsx-projects.php:200
+msgid "Invalid number of columns set. LSX Projects supports 1 to 4 columns."
+msgstr ""
+
+#: templates/archive-projects.php:41
+msgid "All"
+msgstr ""
+
+#: templates/content-single-projects.php:60
+msgid "Related Projects"
+msgstr ""
+
+#: templates/content-single-projects.php:100
+msgid "Related Products"
+msgstr ""
+
+#: templates/content-single-projects.php:100
+msgid "Products used to build this project"
+msgstr ""
+
+#: templates/content-single-projects.php:258
+msgid "Industry:"
+msgstr ""
+
+#: templates/content-single-projects.php:263
+msgid "Services:"
+msgstr ""
+
+#: templates/content-single-projects.php:269
+msgid "Products used:"
+msgstr ""
+
+#: templates/content-single-projects.php:275
+msgid "Team members involved:"
+msgstr ""
+
+#: templates/content-single-projects.php:280
+msgid "See website"
+msgstr ""
+
+#: includes/settings/api.php:3
+msgid "Settings"
+msgstr ""
+
+#: includes/settings/api.php:4
+msgid "License Keys"
+msgstr ""
+
+#: includes/settings/api.php:25
+msgid "Enter the license keys for your add-ons in the boxes below."
+msgstr ""
+
+#: includes/settings/api.php:30
+msgid "You have not installed any add-ons yet. View our list of add-ons"
+msgstr ""
+
+#: includes/settings/api.php:30
+msgid "here"
+msgstr ""
+
+#: includes/settings/display.php:4
+msgid "Placeholders"
+msgstr ""
+
+#: includes/settings/display.php:9
+msgid "Currencies"
+msgstr ""
+
+#: includes/settings/display.php:14
+msgid "Team"
+msgstr ""
+
+#: includes/settings/display.php:19
+msgid "Testimonials"
+msgstr ""
+
+#: includes/settings/display.php:24
+msgid "Projects"
+msgstr ""
+
+#: includes/settings/display.php:29
+msgid "Services"
+msgstr ""
+
+#: includes/settings/display.php:34
+msgid "Blog Customizer (posts widget)"
+msgstr ""
+
+#: includes/settings/display.php:39
+msgid "Sharing"
+msgstr ""
+
+#: includes/settings/display.php:44
+msgid "Videos"
+msgstr ""
+
+#: includes/settings/display.php:49
+msgid "Search"
+msgstr ""

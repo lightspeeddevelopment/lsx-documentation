@@ -29,29 +29,7 @@ get_header(); ?>
 			if ( count( $doc_categories ) > 0 ) :
 			?>
 
-			<ul class="nav nav-tabs lsx-documentation-filter">
-				<?php
-					$doc_categories_selected_class = '';
-
-					if ( empty( $doc_categories_selected ) ) {
-						$doc_categories_selected_class = ' class="active"';
-					}
-				?>
-
-				<li<?php echo wp_kses_post( $doc_categories_selected_class ); ?>><a href="<?php echo empty( $doc_categories_selected ) ? '#' : esc_url( get_post_type_archive_link( 'documentation' ) ); ?>" data-filter="*"><?php esc_html_e( 'All', 'lsx-documentation' ); ?></a></li>
-
-				<?php foreach ( $doc_categories as $doc_category ) : ?>
-					<?php
-						$doc_categories_selected_class = '';
-
-						if ( (string) $doc_categories_selected === (string) $doc_category->slug ) {
-							$doc_categories_selected_class = ' class="active"';
-						}
-					?>
-
-					<li<?php echo wp_kses_post( $doc_categories_selected_class ); ?>><a href="<?php echo empty( $doc_categories_selected ) ? '#' : esc_url( get_term_link( $doc_category ) ); ?>" data-filter=".filter-<?php echo esc_attr( $doc_category->slug ); ?>"><?php echo esc_attr( $doc_category->name ); ?></a></li>
-				<?php endforeach; ?>
-			</ul>
+			
 
 			<?php
 			endif;

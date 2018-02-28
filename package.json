@@ -1,24 +1,25 @@
 {
-  "name": "lsx-documentation",
-  "version": "1.1.0",
-  "description": "LSX Starter Plugin for building LSX theme extensions",
+  "name": "lsx-projects",
+  "version": "1.1.1",
+  "description": "Projects for LSX",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lightspeeddevelopment/lsx-documentation"
+    "url": "git+https://bitbucket.org/feedmycode/lsx-projects"
   },
   "keywords": [
-    "lsx"
+    "lsx",
+    "addon"
   ],
   "author": "LightSpeed",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/lightspeeddevelopment/lsx-documentation/issues"
+    "url": "https://bitbucket.org/feedmycode/lsx-projects/issues"
   },
-  "homepage": "https://github.com/lightspeeddevelopment/lsx-documentation#readme",
+  "homepage": "https://bitbucket.org/feedmycode/lsx-projects#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-rtlcss": "^1.0.0",
@@ -32,9 +33,10 @@
     "gulp-sass": "^3.1.0",
     "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
-    "gulp-wp-pot": "^2.0.4",
-    "jshint": "^2.9.4"
+    "gulp-wp-pot": "^2.0.3",
+    "jshint": "^2.9.4",
+    "map-stream": "^0.0.7"
   }
 }

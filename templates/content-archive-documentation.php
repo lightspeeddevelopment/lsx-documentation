@@ -46,8 +46,19 @@
 		<?php if ( ! empty( $doc_categories ) ) : ?>
 			<p class="lsx-documentation-category"><?php echo wp_kses_post( $doc_categories ); ?></p>
 		<?php endif; ?>
+		<?php
 
-		<!--<div class="lsx-documentation-content"><?php the_excerpt(); ?></div>-->
-		<div class="lsx-documentation-content"><a href="<?php the_permalink(); ?>" class="moretag"><?php esc_html_e( 'View more', 'lsx-documentation' ); ?></a></div>
+$terms = get_the_terms( $post->ID , 'documentation-category' );
+
+foreach ( $terms as $term ) {
+
+echo $term->name;
+
+}
+
+?>
+
+
+		<div class="lsx-documentation-content"><a href="<?php the_permalink(); ?>" class="moretag"><?php esc_html_e( 'View Documentation', 'lsx-documentation' ); ?></a></div>
 	</article>
 </div>

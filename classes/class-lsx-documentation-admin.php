@@ -65,13 +65,13 @@ class LSX_Documentation_Admin {
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'menu_icon'          => 'dashicons-portfolio',
+			'menu_icon'          => 'dashicons-welcome-write-blog',
 			'query_var'          => true,
 			'rewrite'            => array(
-				'slug' => 'portfolio',
+				'slug' => 'documentation',
 			),
 			'capability_type'    => 'post',
-			'has_archive'        => 'portfolio',
+			'has_archive'        => 'documentation',
 			'hierarchical'       => false,
 			'menu_position'      => null,
 			'supports'           => array(
