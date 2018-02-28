@@ -46,17 +46,16 @@
 		<?php if ( ! empty( $doc_categories ) ) : ?>
 			<p class="lsx-documentation-category"><?php echo wp_kses_post( $doc_categories ); ?></p>
 		<?php endif; ?>
-		<?php
+		<div class="archive-doc-cat">
+			<?php $terms = get_the_terms( $post->ID , 'documentation-category' );
+			foreach ( $terms as $term ) {
 
-$terms = get_the_terms( $post->ID , 'documentation-category' );
+			echo $term->name;
 
-foreach ( $terms as $term ) {
+			}
 
-echo $term->name;
+		?> </div>
 
-}
-
-?>
 
 
 		<div class="lsx-documentation-content"><a href="<?php the_permalink(); ?>" class="moretag"><?php esc_html_e( 'View Documentation', 'lsx-documentation' ); ?></a></div>

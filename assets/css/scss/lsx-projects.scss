@@ -1,0 +1,376 @@
+@import 'include-media';
+@import 'customizer-projects-body-colours';
+
+.widget.lsx-projects {
+	.tagline {
+		& + .lsx-projects-shortcode { margin-top: 0; }
+	}
+}
+
+.lsx-projects-archive-link-wrap {
+	position: relative;
+	margin-top: 6rem;
+	overflow: hidden;
+}
+
+.lsx-projects-archive-link {
+	display: inline-block;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 999rem;
+	}
+
+	&:before { right: 120%; }
+	&:after { left: 120%; }
+}
+
+.lsx-projects-shortcode { margin-top: -4rem; }
+
+.lsx-projects-slot {
+	background-color: #FFF;
+	margin: 4rem auto 0;
+	overflow: hidden;
+	text-align: center;
+
+	.entry-tabs & {
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	.lsx-projects-avatar {
+		& > img {
+			width: 100%;
+
+			&.lazyload, &.lazyloading { width: auto; }
+		}
+	}
+
+	.lsx-projects-title {
+		margin: 2.4rem 0 1rem;
+		padding: 0 2rem;
+	}
+
+	.lsx-projects-groups {
+		font-size: 13px;
+		padding: 0 2rem;
+	}
+
+	.lsx-projects-content {
+		margin-top: 2rem;
+		padding: 0 2rem;
+
+		& p {
+			margin-bottom: 0;
+
+			& + p { margin-top: 2.4rem; }
+		}
+
+		& .moretag {
+			display: block;
+			margin: 0 -2rem;
+			padding: 1rem 0;
+			text-align: center;
+			transition: background 300ms ease;
+
+			&:after {
+				color: inherit;
+				content: '\f178';
+				display: inline-block;
+				font-family: 'FontAwesome';
+				font-size: inherit;
+				margin-left: 5px;
+				text-rendering: auto;
+
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+	}
+}
+
+#lsx-projects-slider,
+#lsx-products-slider {
+	@include media('>=tablet') {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
+		&.slick-has-arrows { width: calc(100% - 8rem); }
+	}
+
+	@include media('>=1280px') {
+		margin-left: -15px;
+		margin-right: -15px;
+		width: calc(100% + 30px);
+
+		&.slick-has-arrows { width: calc(100% + 30px); }
+	}
+
+	.tab-pane & {
+		margin-left: -15px;
+		margin-right: -15px;
+
+		@include media('>=phone') {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+
+			&.slick-has-arrows { width: calc(100% - 8rem); }
+		}
+	}
+
+	.lsx-projects-slot.slick-slide {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.slick-dots {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+		height: auto;
+		justify-content: center;
+		list-style: none;
+		margin: 2rem 0 0;
+		padding: 0;
+
+		& > li {
+			line-height: 1;
+			padding: 5px;
+
+			@include media('>=tablet') { padding: 0 7.5px; }
+
+			& > button {
+				background: transparent;
+				border-style: solid;
+				border-width: 1px;
+				font: 0/0 a;
+				height: 12px;
+				transition: all 300ms ease-in-out;
+				width: 4rem;
+
+				@include media('>=tablet') { height: 6px; }
+			}
+		}
+	}
+
+	.slick-arrow {
+		background: transparent;
+		border-radius: 50%;
+		border-style: solid;
+		border-width: 2px;
+		font: 0/0 a;
+		height: 4rem;
+		margin-top: calc((2rem - 17px) / 2);
+		opacity: 1;
+		padding: 0;
+		position: absolute;
+		text-shadow: none;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: border 300ms ease;
+		width: 4rem;
+		z-index: 3;
+
+		&:before {
+			display: block;
+			font-family: 'FontAwesome';
+			font-size: 3rem;
+			line-height: 1;
+			position: absolute;
+			text-rendering: auto;
+			top: 47%;
+			transform: translateY(-50%);
+			transition: color 300ms ease;
+
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		&.slick-disabled { cursor: not-allowed; }
+
+		&.slick-prev {
+			left: -4rem;
+
+			&:before {
+				content: '\f104';
+				left: 1.1rem;
+			}
+		}
+
+		&.slick-next {
+			right: -4rem;
+
+			&:before {
+				content: '\f105';
+				left: 1.5rem;
+			}
+		}
+	}
+}
+
+.archive.post-type-archive-project,
+.archive.tax-project-group {
+	.lsx-projects-container { margin-top: -4rem; }
+
+	.site-main {
+		margin: 0;
+		width: auto;
+	}
+}
+
+.single.single-project {
+	.site-main {
+		& > .project {
+			& > .row {
+				&,
+				& > [col*="col-"]:last-child {
+					@include media('>=phone') { display: flex; }
+				}
+			}
+		}
+	}
+
+	.entry-fixed-sidebar-wrapper { width: 100%; }
+
+	.entry-fixed-sidebar { padding: 2rem; }
+
+	.entry-meta-single {
+		margin-top: 2rem;
+
+		&:first-child { margin-top: 0; }
+	}
+
+	.entry-meta-key {
+		font-weight: bold;
+		margin-top: 2rem;
+
+		&:first-child { margin-top: 0; }
+	}
+
+	.entry-meta-value {}
+
+	.entry-meta-value-team {
+		margin: 0 -0.6rem;
+
+		& > a {
+			border-radius: 50%;
+			display: inline-block;
+			height: 65px;
+			margin: 1.2rem 0.6rem 0;
+			overflow: hidden;
+			width: 65px;
+		}
+	}
+
+	.tab-pane,
+	.tab-pane-fake {
+		padding: 4rem;
+
+		@include media('>=phone') { padding: 4rem 2rem; }
+	}
+
+	.nav-tabs { margin-top: 4.25rem; }
+
+	.lsx-projects-section {
+		&:last-child { margin-bottom: -8.5rem; }
+
+		&:nth-child(odd) { background-color: transparent; }
+
+		h3.lsx-title {
+			&:after { display: block; }
+		}
+	}
+}
+
+.single.single-project,
+.archive.post-type-archive-project,
+.archive.tax-project-group {
+	.entry-tabs {
+		margin-top: 4.25rem;
+
+		@include media('>=phone') { margin-top: 0; }
+	}
+
+	.nav-tabs {
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		align-items: stretch;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		border-bottom: 0 none;
+		margin: 0 0 4.25rem 0;
+		padding-left: 0;
+
+		@include media('>=phone') { flex-flow: row nowrap; }
+
+		& > li {
+			margin-bottom: 0;
+			width: 100%;
+
+			@include media('>=phone') {
+				display: flex;
+				flex: 1 1 auto;
+				max-width: 350px;
+			}
+
+			& + li {
+				@include media('>=phone') { margin-left: 5px; }
+			}
+
+			& > a {
+				border: 0 none;
+				border-radius: 0;
+				font-size: 16px;
+				margin: 0;
+				padding: 1rem 0;
+				text-align: center;
+				transition: all 300ms ease;
+
+				@include media('>=phone') {
+					align-items: center;
+					display: flex;
+					flex: 1 1 auto;
+					justify-content: center;
+				}
+
+				@include media('>=tablet') { font-size: 22px; }
+			}
+
+			&.active > a {
+				border: 0 none;
+				position: relative;
+
+				@include media('>=phone') {
+					&:after {
+						content: '';
+						border-style: solid;
+						border-width: 0 6px 6px 6px;
+						bottom: 0;
+						height: 0;
+						left: 50%;
+						position: absolute;
+						transform: translateX(-50%);
+						width: 0;
+
+						@include media('>=tablet') { border-width: 0 9px 9px 9px; }
+					}
+				}
+			}
+		}
+	}
+}
+
+@include customizer-projects-body-colours(#F6F6F6, #DADDDF, #4A4A4A, #418AD0, #F7AE00, #919191);

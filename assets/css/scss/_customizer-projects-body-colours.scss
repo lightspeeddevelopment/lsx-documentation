@@ -1,0 +1,111 @@
+@mixin customizer-projects-link-colour ($color: #418AD0, $hover: #F7AE00) {
+	&,
+	&:active,
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:hover:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+@mixin customizer-projects-body-colours($bg: #F6F6F6, $breaker: #DADDDF, $color: #4A4A4A, $link: #418AD0, $hover: #F7AE00, $small: #919191) {
+	.widget.lsx-projects {
+		.lsx-projects-archive-link {
+			&:before,
+			&:after {
+				background-color: $breaker;
+			}
+		}
+	}
+
+	.lsx-projects-slot {
+		.lsx-projects-groups > a:not(.btn) {
+			@include customizer-projects-link-colour($small, $hover);
+		}
+
+		.entry-tabs & { border-color: $breaker; }
+
+		.lsx-projects-title > a:not(.btn) {
+			@include customizer-projects-link-colour($color, $hover);
+		}
+
+		.lsx-projects-content {
+			a.moretag {
+				background-color: $link;
+				color: #FFF;
+
+				&:hover {
+					background-color: $hover;
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	.lsx-projects-section {
+		.lsx-projects-slot {
+			.lsx-projects-content {
+				a.moretag {
+					color: #FFF !important;
+
+					&:hover { color: #FFF !important; }
+				}
+			}
+		}
+	}
+
+	#lsx-projects-slider {
+		.slick-dots {
+			& > li {
+				& > button { border-color: $color; }
+
+				&.slick-active > button { background-color: $color; }
+			}
+		}
+
+		.slick-arrow {
+			border-color: $color;
+			color: $color;
+
+			&:hover {
+				border-color: $hover;
+				color: $hover;
+			}
+
+			&.slick-disabled {
+				border-color: $breaker;
+				color: $breaker;
+			}
+		}
+	}
+
+	.single.single-project {
+		.entry-fixed-sidebar { background-color: #FFF; }
+		.tab-pane { background-color: #FFF; }
+	}
+
+	.single.single-project,
+	.archive.post-type-archive-project,
+	.archive.tax-project-group {
+		.nav-tabs {
+			& > li {
+				& > a {
+					background-color: #FFF;
+
+					&:hover { background-color: #FFF; }
+				}
+
+				&.active > a {
+					background-color: $link;
+					color: #FFF;
+
+					&:after { border-color: transparent transparent $bg transparent; }
+				}
+			}
+		}
+	}
+}

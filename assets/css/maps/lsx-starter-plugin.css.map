@@ -1,1 +1,0 @@
-{"version":3,"sources":["lsx-starter-plugin.scss"],"names":[],"mappings":"AAAA,6DAIG","file":"../lsx-starter-plugin.css","sourcesContent":["/**\n * LSX Starter Plugin styles.\n *\n * @package lsx-starter-plugin\n */\n\n@import 'include-media';\n"]}

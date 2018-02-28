@@ -1,0 +1,178 @@
+.widget.lsx-documentation .tagline + .lsx-documentation-shortcode { margin-top: 0; }
+
+.lsx-documentation-archive-link-wrap { position: relative; margin-top: 6rem; overflow: hidden; }
+
+.lsx-documentation-archive-link { display: inline-block; position: relative; }
+
+.lsx-documentation-archive-link:before, .lsx-documentation-archive-link:after { content: ''; display: block; height: 2px; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 999rem; }
+
+.lsx-documentation-archive-link:before { right: 120%; }
+
+.lsx-documentation-archive-link:after { left: 120%; }
+
+.lsx-documentation-shortcode { margin-top: -4rem; }
+ 
+.lsx-documentation-slot { background-color: #FFF; margin: 4rem auto 0; overflow: hidden; text-align: center; }
+
+.entry-tabs .lsx-documentation-slot { border-style: solid; border-width: 1px; }
+
+.lsx-documentation-slot .lsx-documentation-avatar > img.lazyload, .lsx-documentation-slot .lsx-documentation-avatar > img.lazyloading { width: auto; }
+
+.lsx-documentation-slot .lsx-documentation-title { margin: 2.4rem 0 1rem; padding: 0 2rem; }
+
+.lsx-documentation-slot .lsx-documentation-groups { font-size: 13px; padding: 0 2rem; }
+
+.lsx-documentation-slot .lsx-documentation-content { margin-top: 2rem; padding: 0 2rem; }
+
+.lsx-documentation-slot .lsx-documentation-content p { margin-bottom: 0; }
+
+.lsx-documentation-slot .lsx-documentation-content p + p { margin-top: 2.4rem; }
+
+.lsx-documentation-slot .lsx-documentation-content .moretag { display: block; margin: 0 -2rem; padding: 1rem 0; text-align: center; transition: background 300ms ease; }
+
+.lsx-documentation-slot .lsx-documentation-content .moretag:after { color: inherit; content: '\f178'; display: inline-block; font-family: 'FontAwesome'; font-size: inherit; margin-left: 5px; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+@media (min-width: 992px) { #lsx-documentation-slider, #lsx-products-slider { margin-left: auto; margin-right: auto; width: 100%; }
+  #lsx-documentation-slider.slick-has-arrows, #lsx-products-slider.slick-has-arrows { width: calc(100% - 8rem); } }
+
+@media (min-width: 1280px) { #lsx-documentation-slider, #lsx-products-slider { margin-left: -15px; margin-right: -15px; width: calc(100% + 30px); }
+  #lsx-documentation-slider.slick-has-arrows, #lsx-products-slider.slick-has-arrows { width: calc(100% + 30px); } }
+
+.tab-pane #lsx-documentation-slider, .tab-pane #lsx-products-slider { margin-left: -15px; margin-right: -15px; }
+
+@media (min-width: 768px) { .tab-pane #lsx-documentation-slider, .tab-pane #lsx-products-slider { margin-left: auto; margin-right: auto; width: 100%; }
+  .tab-pane #lsx-documentation-slider.slick-has-arrows, .tab-pane #lsx-products-slider.slick-has-arrows { width: calc(100% - 8rem); } }
+
+#lsx-documentation-slider .lsx-documentation-slot.slick-slide, #lsx-products-slider .lsx-documentation-slot.slick-slide { margin-left: 15px; margin-right: 15px; }
+
+#lsx-documentation-slider .slick-dots, #lsx-products-slider .slick-dots { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; height: auto; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; list-style: none; margin: 2rem 0 0; padding: 0; }
+
+#lsx-documentation-slider .slick-dots > li, #lsx-products-slider .slick-dots > li { line-height: 1; padding: 5px; }
+
+@media (min-width: 992px) { #lsx-documentation-slider .slick-dots > li, #lsx-products-slider .slick-dots > li { padding: 0 7.5px; } }
+
+#lsx-documentation-slider .slick-dots > li > button, #lsx-products-slider .slick-dots > li > button { background: transparent; border-style: solid; border-width: 1px; font: 0/0 a; height: 12px; transition: all 300ms ease-in-out; width: 4rem; }
+
+@media (min-width: 992px) { #lsx-documentation-slider .slick-dots > li > button, #lsx-products-slider .slick-dots > li > button { height: 6px; } }
+
+#lsx-documentation-slider .slick-arrow, #lsx-products-slider .slick-arrow { background: transparent; border-radius: 50%; border-style: solid; border-width: 2px; font: 0/0 a; height: 4rem; margin-top: calc((2rem - 17px) / 2); opacity: 1; padding: 0; position: absolute; text-shadow: none; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); transition: border 300ms ease; width: 4rem; z-index: 3; }
+
+#lsx-documentation-slider .slick-arrow:before, #lsx-products-slider .slick-arrow:before { display: block; font-family: 'FontAwesome'; font-size: 3rem; line-height: 1; position: absolute; text-rendering: auto; top: 47%; -webkit-transform: translateY(-50%); transform: translateY(-50%); transition: color 300ms ease; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+#lsx-documentation-slider .slick-arrow.slick-disabled, #lsx-products-slider .slick-arrow.slick-disabled { cursor: not-allowed; }
+
+#lsx-documentation-slider .slick-arrow.slick-prev, #lsx-products-slider .slick-arrow.slick-prev { left: -4rem; }
+
+#lsx-documentation-slider .slick-arrow.slick-prev:before, #lsx-products-slider .slick-arrow.slick-prev:before { content: '\f104'; left: 1.1rem; }
+
+#lsx-documentation-slider .slick-arrow.slick-next, #lsx-products-slider .slick-arrow.slick-next { right: -4rem; }
+
+#lsx-documentation-slider .slick-arrow.slick-next:before, #lsx-products-slider .slick-arrow.slick-next:before { content: '\f105'; left: 1.5rem; }
+
+.archive.post-type-archive-documentation .lsx-documentation-container, .archive.tax-documentation-group .lsx-documentation-container { margin-top: -4rem; }
+
+.archive.post-type-archive-documentation .site-main, .archive.tax-documentation-group .site-main { margin: 0; width: auto; }
+
+@media (min-width: 768px) { .single.single-documentation .site-main > .documentation > .row, .single.single-documentation .site-main > .documentation > .row > [col*="col-"]:last-child { display: -webkit-box; display: -ms-flexbox; display: flex; } }
+
+.single.single-documentation .entry-fixed-sidebar-wrapper { width: 100%; }
+
+.single.single-documentation .entry-fixed-sidebar { padding: 2rem; }
+
+.single.single-documentation .entry-meta-single { margin-top: 2rem; }
+
+.single.single-documentation .entry-meta-single:first-child { margin-top: 0; }
+
+.single.single-documentation .entry-meta-key { font-weight: bold; margin-top: 2rem; }
+
+.single.single-documentation .entry-meta-key:first-child { margin-top: 0; }
+
+.single.single-documentation .entry-meta-value-team { margin: 0 -0.6rem; }
+
+.single.single-documentation .entry-meta-value-team > a { border-radius: 50%; display: inline-block; height: 65px; margin: 1.2rem 0.6rem 0; overflow: hidden; width: 65px; }
+
+.single.single-documentation .tab-pane, .single.single-documentation .tab-pane-fake { padding: 4rem; }
+
+@media (min-width: 768px) { .single.single-documentation .tab-pane, .single.single-documentation .tab-pane-fake { padding: 4rem 2rem; } }
+
+.single.single-documentation .nav-tabs { margin-top: 4.25rem; }
+
+.single.single-documentation .lsx-documentation-section:last-child { margin-bottom: -8.5rem; }
+
+.single.single-documentation .lsx-documentation-section:nth-child(odd) { background-color: transparent; }
+
+.single.single-documentation .lsx-documentation-section h3.lsx-title:after { display: block; }
+
+.single.single-documentation .entry-tabs, .archive.post-type-archive-documentation .entry-tabs, .archive.tax-documentation-group .entry-tabs { margin-top: 4.25rem; }
+
+@media (min-width: 768px) { .single.single-documentation .entry-tabs, .archive.post-type-archive-documentation .entry-tabs, .archive.tax-documentation-group .entry-tabs { margin-top: 0; } }
+
+.single.single-documentation .nav-tabs, .archive.post-type-archive-documentation .nav-tabs, .archive.tax-documentation-group .nav-tabs { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; border-bottom: 0 none; margin: 0 0 4.25rem 0; padding-left: 0; }
+
+.single.single-documentation .nav-tabs:before, .single.single-documentation .nav-tabs:after, .archive.post-type-archive-documentation .nav-tabs:before, .archive.post-type-archive-documentation .nav-tabs:after, .archive.tax-documentation-group .nav-tabs:before, .archive.tax-documentation-group .nav-tabs:after { display: none; }
+
+@media (min-width: 768px) { .single.single-documentation .nav-tabs, .archive.post-type-archive-documentation .nav-tabs, .archive.tax-documentation-group .nav-tabs { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; } }
+
+.single.single-documentation .nav-tabs > li, .archive.post-type-archive-documentation .nav-tabs > li, .archive.tax-documentation-group .nav-tabs > li { margin-bottom: 0; width: 100%; }
+
+@media (min-width: 768px) { .single.single-documentation .nav-tabs > li, .archive.post-type-archive-documentation .nav-tabs > li, .archive.tax-documentation-group .nav-tabs > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; max-width: 350px; } }
+
+@media (min-width: 768px) { .single.single-documentation .nav-tabs > li + li, .archive.post-type-archive-documentation .nav-tabs > li + li, .archive.tax-documentation-group .nav-tabs > li + li { margin-left: 5px; } }
+
+.single.single-documentation .nav-tabs > li > a, .archive.post-type-archive-documentation .nav-tabs > li > a, .archive.tax-documentation-group .nav-tabs > li > a { border: 0 none; border-radius: 0; font-size: 16px; margin: 0; padding: 1rem 0; text-align: center; transition: all 300ms ease; }
+
+@media (min-width: 768px) { .single.single-documentation .nav-tabs > li > a, .archive.post-type-archive-documentation .nav-tabs > li > a, .archive.tax-documentation-group .nav-tabs > li > a { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
+
+@media (min-width: 992px) { .single.single-documentation .nav-tabs > li > a, .archive.post-type-archive-documentation .nav-tabs > li > a, .archive.tax-documentation-group .nav-tabs > li > a { font-size: 22px; } }
+
+.single.single-documentation .nav-tabs > li.active > a, .archive.post-type-archive-documentation .nav-tabs > li.active > a, .archive.tax-documentation-group .nav-tabs > li.active > a { border: 0 none; position: relative; }
+
+@media (min-width: 768px) { .single.single-documentation .nav-tabs > li.active > a:after, .archive.post-type-archive-documentation .nav-tabs > li.active > a:after, .archive.tax-documentation-group .nav-tabs > li.active > a:after { content: ''; border-style: solid; border-width: 0 6px 6px 6px; bottom: 0; height: 0; left: 50%; position: absolute; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 0; } }
+
+@media (min-width: 768px) and (min-width: 992px) { .single.single-documentation .nav-tabs > li.active > a:after, .archive.post-type-archive-documentation .nav-tabs > li.active > a:after, .archive.tax-documentation-group .nav-tabs > li.active > a:after { border-width: 0 9px 9px 9px; } }
+
+.widget.lsx-documentation .lsx-documentation-archive-link:before, .widget.lsx-documentation .lsx-documentation-archive-link:after { background-color: #DADDDF; }
+
+.lsx-documentation-slot .lsx-documentation-groups > a:not(.btn), .lsx-documentation-slot .lsx-documentation-groups > a:not(.btn):active, .lsx-documentation-slot .lsx-documentation-groups > a:not(.btn):visited { color: #919191; }
+
+.lsx-documentation-slot .lsx-documentation-groups > a:not(.btn):hover, .lsx-documentation-slot .lsx-documentation-groups > a:not(.btn):hover:active, .lsx-documentation-slot .lsx-documentation-groups > a:not(.btn):focus { color: #F7AE00; }
+
+.entry-tabs .lsx-documentation-slot { border-color: #DADDDF; }
+
+.lsx-documentation-slot .lsx-documentation-title > a:not(.btn), .lsx-documentation-slot .lsx-documentation-title > a:not(.btn):active, .lsx-documentation-slot .lsx-documentation-title > a:not(.btn):visited { color: #4A4A4A; }
+
+.lsx-documentation-slot .lsx-documentation-title > a:not(.btn):hover, .lsx-documentation-slot .lsx-documentation-title > a:not(.btn):hover:active, .lsx-documentation-slot .lsx-documentation-title > a:not(.btn):focus { color: #F7AE00; }
+
+.lsx-documentation-slot .lsx-documentation-content a.moretag:not(.btn) { background-color: #418AD0; color: #FFF; }
+
+.lsx-documentation-slot .lsx-documentation-content a.moretag:hover { background-color: #F7AE00; color: #FFF; }
+
+.lsx-documentation-section .lsx-documentation-slot .lsx-documentation-content a.moretag { color: #FFF !important; }
+
+.lsx-documentation-section .lsx-documentation-slot .lsx-documentation-content a.moretag:hover { color: #FFF !important; }
+
+#lsx-documentation-slider .slick-dots > li > button { border-color: #4A4A4A; }
+
+#lsx-documentation-slider .slick-dots > li.slick-active > button { background-color: #4A4A4A; }
+
+#lsx-documentation-slider .slick-arrow { border-color: #4A4A4A; color: #4A4A4A; }
+
+#lsx-documentation-slider .slick-arrow:hover { border-color: #F7AE00; color: #F7AE00; }
+
+#lsx-documentation-slider .slick-arrow.slick-disabled { border-color: #DADDDF; color: #DADDDF; }
+
+.single.single-documentation .entry-fixed-sidebar { background-color: #FFF; }
+
+.single.single-documentation .tab-pane { background-color: #FFF; }
+
+.single.single-documentation .nav-tabs > li > a, .archive.post-type-archive-documentation .nav-tabs > li > a, .archive.tax-documentation-group .nav-tabs > li > a { background-color: #FFF; }
+
+.single.single-documentation .nav-tabs > li > a:hover, .archive.post-type-archive-documentation .nav-tabs > li > a:hover, .archive.tax-documentation-group .nav-tabs > li > a:hover { background-color: #FFF; }
+
+.single.single-documentation .nav-tabs > li.active > a, .archive.post-type-archive-documentation .nav-tabs > li.active > a, .archive.tax-documentation-group .nav-tabs > li.active > a { background-color: #418AD0; color: #FFF; }
+
+.single.single-documentation .nav-tabs > li.active > a:after, .archive.post-type-archive-documentation .nav-tabs > li.active > a:after, .archive.tax-documentation-group .nav-tabs > li.active > a:after { border-color: transparent transparent #F6F6F6 transparent; }
+
+figure.lsx-documentation-avatar { padding-top: 45px; padding-bottom: 25px; }
+
+/*# sourceMappingURL=maps/lsx-documentation.css.map */

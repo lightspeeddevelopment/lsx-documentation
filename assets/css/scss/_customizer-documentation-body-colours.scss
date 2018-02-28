@@ -1,0 +1,111 @@
+@mixin customizer-documentation-link-colour ($color: #418AD0, $hover: #F7AE00) {
+	&,
+	&:active,
+	&:visited {
+		color: $color;
+	}
+
+	&:hover,
+	&:hover:active,
+	&:focus {
+		color: $hover;
+	}
+}
+
+@mixin customizer-documentation-body-colours($bg: #F6F6F6, $breaker: #DADDDF, $color: #4A4A4A, $link: #418AD0, $hover: #F7AE00, $small: #919191) {
+	.widget.lsx-documentation {
+		.lsx-documentation-archive-link {
+			&:before,
+			&:after {
+				background-color: $breaker;
+			}
+		}
+	}
+
+	.lsx-documentation-slot {
+		.lsx-documentation-groups > a:not(.btn) {
+			@include customizer-documentation-link-colour($small, $hover);
+		}
+
+		.entry-tabs & { border-color: $breaker; }
+
+		.lsx-documentation-title > a:not(.btn) {
+			@include customizer-documentation-link-colour($color, $hover);
+		}
+
+		.lsx-documentation-content {
+			a.moretag {
+				background-color: $link;
+				color: #FFF;
+
+				&:hover {
+					background-color: $hover;
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	.lsx-documentation-section {
+		.lsx-documentation-slot {
+			.lsx-documentation-content {
+				a.moretag {
+					color: #FFF !important;
+
+					&:hover { color: #FFF !important; }
+				}
+			}
+		}
+	}
+
+	#lsx-documentation-slider {
+		.slick-dots {
+			& > li {
+				& > button { border-color: $color; }
+
+				&.slick-active > button { background-color: $color; }
+			}
+		}
+
+		.slick-arrow {
+			border-color: $color;
+			color: $color;
+
+			&:hover {
+				border-color: $hover;
+				color: $hover;
+			}
+
+			&.slick-disabled {
+				border-color: $breaker;
+				color: $breaker;
+			}
+		}
+	}
+
+	.single.single-documentation {
+		.entry-fixed-sidebar { background-color: #FFF; }
+		.tab-pane { background-color: #FFF; }
+	}
+
+	.single.single-documentation,
+	.archive.post-type-archive-documentation,
+	.archive.tax-documentation-group {
+		.nav-tabs {
+			& > li {
+				& > a {
+					background-color: #FFF;
+
+					&:hover { background-color: #FFF; }
+				}
+
+				&.active > a {
+					background-color: $link;
+					color: #FFF;
+
+					&:after { border-color: transparent transparent $bg transparent; }
+				}
+			}
+		}
+	}
+}
