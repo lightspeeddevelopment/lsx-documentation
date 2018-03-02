@@ -8,6 +8,7 @@
 	$client = get_post_meta( get_the_ID(), 'lsx_documentation_client', true );
 	$client_logo = get_post_meta( get_the_ID(), 'lsx_documentation_client_logo', true );
 	$url = get_post_meta( get_the_ID(), 'lsx_documentation_url', true );
+	$qanda = get_post_meta( get_the_ID(), 'gp', false );
 
 	global $lsx_documentation;
 
@@ -266,12 +267,21 @@ foreach($custom_terms as $custom_term) {
 					<?php if ( ! empty( $connection_team['small_list_html'] ) ) : ?>
 						<div class="entry-meta-key"><?php esc_html_e( 'Team members involved:', 'lsx-documentation' ); ?></div>
 						<div class="entry-meta-value entry-meta-value-team"><?php echo wp_kses_post( $connection_team['small_list_html'] ); ?></div>
-					<?php endif; ?>
-
-					<?php if ( ! empty( $url ) ) : ?>
+		
+				<?php endif; ?>
+					
+	<?php if ( ! empty( $url ) ) : ?>
 						<div class="entry-meta-single"><a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="nofollow" class="btn btn-block secondary-btn"><?php esc_html_e( 'View Product', 'lsx-documentation' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
 					<?php endif; ?>
 
+					                   <?php if ( ! empty( $qanda ) ) {
+                    foreach( $qanda as $qa ) {
+                        echo '<p>'.$qa['faqquestion'].'</p>';
+                        echo '<p>'.$qa['faqanswer'].'</p>';
+                    }
+                    } ?>
+	
+	
 					<?php if ( ! empty( $button_label ) ) : ?>
 						<div class="entry-meta-single"><a href="#lsx-documentation-contact" data-toggle="modal" class="btn btn-block cta-btn"><?php echo esc_html( $button_label ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
 					<?php endif; ?>

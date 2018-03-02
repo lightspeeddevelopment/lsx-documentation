@@ -9,7 +9,7 @@
  * @copyright 2016 LightSpeed
  */
 class LSX_Documentation_Admin {
-
+	
 	public function __construct() {
 		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
 			require_once( LSX_DOCUMENTATION_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
@@ -168,6 +168,18 @@ class LSX_Documentation_Admin {
 			),
 		);
 
+ $group_fields = array(
+            array(
+                'name' => esc_html__( 'Question:', 'lsx-documentation' ),
+                'id'   => 'faqquestion',
+                'type' => 'text',
+            ),
+            array(
+                'name' => esc_html__( 'Answer:', 'lsx-documentation' ),
+                'id'   => 'faqanswer',
+                'type' => 'text',
+            ),
+        );        
 		// $fields[] = array(
 		// 	'name' => esc_html__( 'Documentation:', 'lsx-documentation' ),
 		// 	'id' => 'documentation_to_documentation',
@@ -242,6 +254,7 @@ class LSX_Documentation_Admin {
 			);
 		}
 
+
 		if ( class_exists( 'woocommerce' ) ) {
 			$fields[] = array(
 				'name' => esc_html__( 'Products used for this documentation:', 'lsx-documentation' ),
@@ -260,6 +273,16 @@ class LSX_Documentation_Admin {
 				'cols' => 12,
 			);
 		}
+		
+	$fields[] =    array(
+            'id'         => 'gp',
+            'name'       => 'FAQ',
+            'type'       => 'group',
+            'repeatable' => true,
+            'sortable'   => true,
+            'fields'     => $group_fields,
+            'desc'       => 'This is the group description.',
+        );    
 
 		$meta_boxes[] = array(
 			'title'  => esc_html__( 'Documentation Details', 'lsx-documentation' ),
