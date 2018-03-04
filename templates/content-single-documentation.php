@@ -273,13 +273,6 @@ foreach($custom_terms as $custom_term) {
 	<?php if ( ! empty( $url ) ) : ?>
 						<div class="entry-meta-single"><a href="<?php echo esc_url( $url ); ?>" target="_blank" rel="nofollow" class="btn btn-block secondary-btn"><?php esc_html_e( 'View Product', 'lsx-documentation' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
 					<?php endif; ?>
-
-					                   <?php if ( ! empty( $qanda ) ) {
-                    foreach( $qanda as $qa ) {
-                        echo '<p>'.$qa['faqquestion'].'</p>';
-                        echo '<p>'.$qa['faqanswer'].'</p>';
-                    }
-                    } ?>
 	
 	
 					<?php if ( ! empty( $button_label ) ) : ?>
@@ -291,7 +284,18 @@ foreach($custom_terms as $custom_term) {
 
 		<div class="col-xs-12 col-sm-7 col-md-8">
 						<div class="entry-content"><?php the_content(); ?></div>
-
+ <?php if ( ! empty( $qanda ) ) { ?> 
+			<div class="parent-container">
+  <ul class="faq"> 
+	  <?php
+                    foreach( $qanda as $qa ) {
+                        echo '<li><h3 class="question">'.$qa['faqquestion'].'<div class="plus-minus-toggle collapsed"></div></h3>';
+                        echo '<div class="answer">'.$qa['faqanswer'].'</div></li>';
+                    }
+                    } 
+	  ?>
+	    </ul>
+</div>
 			<?php if ( count( $connections ) > 0 ) : ?>
 				<?php foreach ( $connections as $i => $connection ) : ?>
 					<?php
