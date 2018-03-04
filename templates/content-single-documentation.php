@@ -285,7 +285,7 @@ foreach($custom_terms as $custom_term) {
 		<div class="col-xs-12 col-sm-7 col-md-8">
 						<div class="entry-content"><?php the_content(); ?></div>
  <?php if ( ! empty( $qanda ) ) { ?> 
-			<div class="parent-container">
+			<div class="parent-container-faq">
   <ul class="faq"> 
 	  <?php
                     foreach( $qanda as $qa ) {
