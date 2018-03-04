@@ -62,7 +62,7 @@
 .cmb_metabox .cmb-cell-12 input[type=text],
 .cmb_metabox .cmb-cell-12 textarea,
 .cmb_metabox .cmb-cell-12 select{
-	width: 25%;
+	width: 75%;
 	margin: 0;
 }
 .cmb_metabox .cmb-cell-12 .select2-container {

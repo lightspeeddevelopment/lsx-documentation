@@ -172,12 +172,12 @@ class LSX_Documentation_Admin {
             array(
                 'name' => esc_html__( 'Question:', 'lsx-documentation' ),
                 'id'   => 'faqquestion',
-                'type' => 'text',
+                'type' => 'textarea',
             ),
             array(
                 'name' => esc_html__( 'Answer:', 'lsx-documentation' ),
                 'id'   => 'faqanswer',
-                'type' => 'text',
+                'type' => 'textarea',
             ),
         );        
 		// $fields[] = array(
