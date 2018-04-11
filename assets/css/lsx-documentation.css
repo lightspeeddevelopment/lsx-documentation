@@ -193,7 +193,7 @@ a.single-doc-tax-list:hover::after { content: "  >"; padding-left: 2px; }
 
 .faq li{border-bottom:1px solid #999;margin-bottom:15px}
 
-.faq li.active .answer{max-height:275px!important;padding-bottom:25px;transition:max-height .5s ease,padding-bottom .5s ease}
+.faq li.active .answer{max-height:none;padding-bottom:25px;transition:max-height .5s ease,padding-bottom .5s ease}
 
 .faq li.active .question{color:#ff790f;transition:color .5s ease}.faq .answer{color:#090909;font-family:serif;font-size:16px;line-height:24px;max-height:0;overflow:hidden;transition:max-height .5s ease,padding-bottom .5s ease}
 
