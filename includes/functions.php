@@ -56,3 +56,4 @@ function lsx_documentation_sidebar() {
 function lsx_documentation_single_tag() {
 	do_action( 'lsx_documentation_single_tag' );
 }
+
