@@ -9,7 +9,6 @@
  * @copyright 2016 LightSpeed
  */
 class LSX_Documentation_Admin {
-	
 	public function __construct() {
 		if ( ! class_exists( 'CMB_Meta_Box' ) ) {
 			require_once( LSX_DOCUMENTATION_PATH . '/vendor/Custom-Meta-Boxes/custom-meta-boxes.php' );
@@ -44,37 +43,37 @@ class LSX_Documentation_Admin {
 	 */
 	public function post_type_setup() {
 		$labels = array(
-			'name'               => esc_html_x( 'Documentation', 'post type general name', 'lsx-documentation' ),
+			'name'			   => esc_html_x( 'Documentation', 'post type general name', 'lsx-documentation' ),
 			'singular_name'      => esc_html_x( 'Documentation', 'post type singular name', 'lsx-documentation' ),
-			'add_new'            => esc_html_x( 'Add New', 'post type general name', 'lsx-documentation' ),
+			'add_new'          => esc_html_x( 'Add New', 'post type general name', 'lsx-documentation' ),
 			'add_new_item'       => esc_html__( 'Add New Documentation', 'lsx-documentation' ),
-			'edit_item'          => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
-			'new_item'           => esc_html__( 'New Documentation', 'lsx-documentation' ),
-			'all_items'          => esc_html__( 'All Documentation', 'lsx-documentation' ),
-			'view_item'          => esc_html__( 'View Documentation', 'lsx-documentation' ),
+			'edit_item'		  => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
+			'new_item'		   => esc_html__( 'New Documentation', 'lsx-documentation' ),
+			'all_items'		  => esc_html__( 'All Documentation', 'lsx-documentation' ),
+			'view_item'		  => esc_html__( 'View Documentation', 'lsx-documentation' ),
 			'search_items'       => esc_html__( 'Search Documentation', 'lsx-documentation' ),
-			'not_found'          => esc_html__( 'No documentation found', 'lsx-documentation' ),
+			'not_found'		  => esc_html__( 'No documentation found', 'lsx-documentation' ),
 			'not_found_in_trash' => esc_html__( 'No documentation found in Trash', 'lsx-documentation' ),
 			'parent_item_colon'  => '',
-			'menu_name'          => esc_html_x( 'Documentation', 'admin menu', 'lsx-documentation' ),
+			'menu_name'		  => esc_html_x( 'Documentation', 'admin menu', 'lsx-documentation' ),
 		);
 
 		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
+			'labels'			 => $labels,
+			'public'			 => true,
 			'publicly_queryable' => true,
-			'show_ui'            => true,
+			'show_ui'          => true,
 			'show_in_menu'       => true,
-			'menu_icon'          => 'dashicons-welcome-write-blog',
-			'query_var'          => true,
-			'rewrite'            => array(
+			'menu_icon'		  => 'dashicons-welcome-write-blog',
+			'query_var'		  => true,
+			'rewrite'          => array(
 				'slug' => 'documentation',
 			),
 			'capability_type'    => 'post',
-			'has_archive'        => 'documentation',
+			'has_archive'		=> 'documentation',
 			'hierarchical'       => false,
 			'menu_position'      => null,
-			'supports'           => array(
+			'supports'		   => array(
 				'title',
 				'editor',
 				'thumbnail',
@@ -90,26 +89,26 @@ class LSX_Documentation_Admin {
 	 */
 	public function taxonomy_setup() {
 		$labels = array(
-			'name'              => esc_html_x( 'Documentation Categories', 'taxonomy general name', 'lsx-documentation' ),
+			'name'			  => esc_html_x( 'Documentation Categories', 'taxonomy general name', 'lsx-documentation' ),
 			'singular_name'     => esc_html_x( 'Doc Category', 'taxonomy singular name', 'lsx-documentation' ),
 			'search_items'      => esc_html__( 'Search Doc Categories', 'lsx-documentation' ),
-			'all_items'         => esc_html__( 'All Documentation', 'lsx-documentation' ),
+			'all_items'		 => esc_html__( 'All Documentation', 'lsx-documentation' ),
 			'parent_item'       => esc_html__( 'Parent Documentation', 'lsx-documentation' ),
 			'parent_item_colon' => esc_html__( 'Parent Documentation:', 'lsx-documentation' ),
-			'edit_item'         => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
+			'edit_item'		 => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
 			'update_item'       => esc_html__( 'Update Documentation', 'lsx-documentation' ),
 			'add_new_item'      => esc_html__( 'Add New', 'lsx-documentation' ),
 			'new_item_name'     => esc_html__( 'New Documentation Name', 'lsx-documentation' ),
-			'menu_name'         => esc_html__( 'Documentation Category', 'lsx-documentation' ),
+			'menu_name'		 => esc_html__( 'Documentation Category', 'lsx-documentation' ),
 		);
 
 		$args = array(
 			'hierarchical'      => true,
-			'labels'            => $labels,
-			'show_ui'           => true,
+			'labels'          => $labels,
+			'show_ui'		   => true,
 			'show_admin_column' => true,
-			'query_var'         => true,
-			'rewrite'           => array(
+			'query_var'		 => true,
+			'rewrite'		   => array(
 				'slug' => 'documentation-category',
 			),
 		);
@@ -122,26 +121,26 @@ class LSX_Documentation_Admin {
 	 */
 	public function product_taxonomy_setup() {
 		$labels = array(
-			'name'              => esc_html_x( 'Product Tags', 'taxonomy general name', 'lsx-documentation' ),
+			'name'			  => esc_html_x( 'Product Tags', 'taxonomy general name', 'lsx-documentation' ),
 			'singular_name'     => esc_html_x( 'Product Tag', 'taxonomy singular name', 'lsx-documentation' ),
 			'search_items'      => esc_html__( 'Search Product Tags', 'lsx-documentation' ),
-			'all_items'         => esc_html__( 'All Product Tags', 'lsx-documentation' ),
+			'all_items'		 => esc_html__( 'All Product Tags', 'lsx-documentation' ),
 			'parent_item'       => esc_html__( 'Parent Product Tags', 'lsx-documentation' ),
 			'parent_item_colon' => esc_html__( 'Parent Product Tags:', 'lsx-documentation' ),
-			'edit_item'         => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
+			'edit_item'		 => esc_html__( 'Edit Documentation', 'lsx-documentation' ),
 			'update_item'       => esc_html__( 'Update Product Tags', 'lsx-documentation' ),
 			'add_new_item'      => esc_html__( 'Add New', 'lsx-documentation' ),
 			'new_item_name'     => esc_html__( 'New Product Tag Name', 'lsx-documentation' ),
-			'menu_name'         => esc_html__( 'Product Tags', 'lsx-documentation' ),
+			'menu_name'		 => esc_html__( 'Product Tags', 'lsx-documentation' ),
 		);
 
 		$args = array(
 			'hierarchical'      => false,
-			'labels'            => $labels,
-			'show_ui'           => true,
+			'labels'          => $labels,
+			'show_ui'		   => true,
 			'show_admin_column' => true,
-			'query_var'         => true,
-			'rewrite'           => array(
+			'query_var'		 => true,
+			'rewrite'		   => array(
 				'slug' => 'product-tags',
 			),
 		);
@@ -168,18 +167,18 @@ class LSX_Documentation_Admin {
 			),
 		);
 
- $group_fields = array(
-            array(
-                'name' => esc_html__( 'Question:', 'lsx-documentation' ),
-                'id'   => 'faqquestion',
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => esc_html__( 'Answer:', 'lsx-documentation' ),
-                'id'   => 'faqanswer',
-                'type' => 'textarea',
-            ),
-        );        
+		$group_fields = array(
+			array(
+				'name' => esc_html__( 'Question:', 'lsx-documentation' ),
+				'id'   => 'faqquestion',
+				'type' => 'textarea',
+			),
+			array(
+				'name' => esc_html__( 'Answer:', 'lsx-documentation' ),
+				'id'   => 'faqanswer',
+				'type' => 'textarea',
+			),
+		);
 		// $fields[] = array(
 		// 	'name' => esc_html__( 'Documentation:', 'lsx-documentation' ),
 		// 	'id' => 'documentation_to_documentation',
@@ -273,16 +272,16 @@ class LSX_Documentation_Admin {
 				'cols' => 12,
 			);
 		}
-		
-	$fields[] =    array(
-            'id'         => 'gp',
-            'name'       => 'FAQ',
-            'type'       => 'group',
-            'repeatable' => true,
-            'sortable'   => true,
-            'fields'     => $group_fields,
-            'desc'       => 'This is the group description.',
-        );    
+
+		$fields[] = array(
+			'id'            => 'gp',
+			'name'          => 'FAQ',
+			'type'          => 'group',
+			'repeatable'    => true,
+			'sortable'      => true,
+			'fields'        => $group_fields,
+			'desc'          => 'This is the group description.',
+		);
 
 		$meta_boxes[] = array(
 			'title'  => esc_html__( 'Documentation Details', 'lsx-documentation' ),
@@ -299,7 +298,6 @@ class LSX_Documentation_Admin {
 	public function post_relations( $post_id, $field, $value ) {
 		$connections = array(
 			// 'documentation_to_documentation',
-
 			'documentation_to_service',
 			'service_to_documentation',
 
@@ -342,7 +340,7 @@ class LSX_Documentation_Admin {
 	}
 
 	public function assets() {
-		//wp_enqueue_media();
+		// wp_enqueue_media();.
 		wp_enqueue_script( 'media-upload' );
 		wp_enqueue_script( 'thickbox' );
 		wp_enqueue_style( 'thickbox' );
@@ -403,11 +401,11 @@ class LSX_Documentation_Admin {
 		if ( ! function_exists( 'tour_operator' ) ) {
 			if ( ! array_key_exists( 'display', $tabs ) ) {
 				$tabs['display'] = array(
-					'page_title'        => '',
+					'page_title'		=> '',
 					'page_description'  => '',
-					'menu_title'        => esc_html__( 'Display', 'lsx-documentation' ),
-					'template'          => LSX_DOCUMENTATION_PATH . 'includes/settings/display.php',
-					'default'           => $default,
+					'menu_title'		=> esc_html__( 'Display', 'lsx-documentation' ),
+					'template'		  => LSX_DOCUMENTATION_PATH . 'includes/settings/display.php',
+					'default'		   => $default,
 				);
 
 				$default = false;
