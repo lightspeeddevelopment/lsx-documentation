@@ -253,7 +253,6 @@ class LSX_Documentation_Admin {
 			);
 		}
 
-
 		if ( class_exists( 'woocommerce' ) ) {
 			$fields[] = array(
 				'name' => esc_html__( 'Products used for this documentation:', 'lsx-documentation' ),
