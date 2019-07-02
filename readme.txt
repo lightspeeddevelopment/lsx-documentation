@@ -1,6 +1,6 @@
 === LSX Documentation ===
 Contributors: feedmymedia
-Tags:  LSX Theme, Documentation, Documentation Plugin, FAQ, product docs
+Tags:  lsx, Documentation, Documentation Plugin, FAQ, product docs
 Donate link: https://www.lsdev.biz/product/lsx-documentation/
 Requires at least: 4.3
 Tested up to: 4.9.4
