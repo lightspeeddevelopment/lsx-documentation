@@ -21,7 +21,7 @@ class LSX_Documentation_Frontend {
 			}
 		}
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 999 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 5 );
 		add_filter( 'wp_kses_allowed_html', array( $this, 'wp_kses_allowed_html' ), 10, 2 );
 		add_filter( 'template_include', array( $this, 'single_template_include' ), 99 );
 		add_filter( 'template_include', array( $this, 'archive_template_include' ), 99 );
