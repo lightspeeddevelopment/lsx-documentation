@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "clean-css": "^4.1.11",
+    "minimist": "^1.2.2",
     "shelljs": "^0.8.3"
   }
 }
